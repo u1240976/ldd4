@@ -19,6 +19,5 @@ struct vaddr {
 #define ADDR_TRANS _IOW(ADDR_IOC_MAGIC, 1, struct vaddr)
 #define ADDR_IOC_MAXNR 1
 
-
 #endif /* end of include guard: __ADDR_IOCTL_H__ */
 

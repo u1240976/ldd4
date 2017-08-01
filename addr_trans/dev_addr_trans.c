@@ -84,7 +84,7 @@ long addr_ioctl(struct file *filp, unsigned int cmd, unsigned long arg)
     switch(cmd) {
         case ADDR_TRANS: {
             void __user *argp = (void __user*)arg;
-            struct vaddr __user* user_virt_addr = argp;
+            struct vaddr __user* user_virt_addr = (struct vaddr __user*)argp;
             struct vaddr virt_addr;
             copy_from_user(&virt_addr, user_virt_addr, sizeof(struct vaddr));
 
